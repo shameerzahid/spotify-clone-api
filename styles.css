@@ -1,0 +1,555 @@
+body {
+  background-color: #121212 !important;
+  overflow-y: scroll;
+  height: 100%;
+  z-index: 1;
+  overflow-x: hidden;
+}
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #212121;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Style the navigation items */
+.sidenav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.sidenav li {
+  margin-bottom: 10px;
+}
+
+/* Style the search input */
+.search {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url("search-icon.png"); /* Add your search icon image */
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px; /* Adjust the size of the search icon */
+  padding-left: 40px; /* Adjust padding for the icon */
+  transition: width 0.4s ease-in-out;
+}
+
+/* Style the search input when it gets focus */
+.search:focus {
+  width: 80%;
+  outline: none;
+}
+.icon {
+  width: 20px;
+  height: auto;
+  margin-right: 10px;
+}
+.playlist-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 3%;
+  margin-bottom: 90px;
+}
+
+.playlist-title h3 {
+  margin: 0;
+  top: 72px;
+  left: -5px;
+  position: relative;
+}
+.playlist:hover {
+  background-color: #000;
+  border-radius: 5px;
+}
+.carousel-inner {
+  position: relative;
+  left: 21%;
+}
+.image-thumb {
+  margin-left: -28vw;
+}
+.artist-name,
+.song-name {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  left: 25%;
+  color: white;
+}
+.featured {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  left: 25%;
+  font-size: 25px;
+  color: white;
+}
+/* .carousel-caption {
+  position: relative;
+  top: 200px;
+} */
+.carousel-caption {
+  padding-right: 30vw;
+  margin-bottom: 20vh;
+}
+.divtext {
+  position: relative;
+  margin-bottom: 15vh;
+}
+.carousel-inner .carousel-item .slider-2 {
+  width: 1170px; /* Set the width to 1170px */
+  height: 454px; /* Set the height to 454px */
+  object-fit: cover;
+  object-position: center;
+}
+.carousel-inner .carousel-item .slider-3 {
+  width: 1170px; /* Set the width to 1170px */
+  height: 454px; /* Set the height to 454px */
+  object-fit: cover;
+  object-position: center;
+}
+.carousel-item img {
+  width: 1170px;
+  height: 454px;
+  object-fit: cover;
+  object-position: left center;
+  object-position: 0 50%;
+}
+.carousel-indicators {
+  text-align: center;
+  justify-content: flex-end;
+  display: flex;
+  justify-content: center;
+}
+#image-slider {
+  margin-left: -85px;
+}
+.slider-btn {
+  background-color: #ee4950;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  transform: translate(450%, 50%);
+  z-index: 100;
+  margin-top: 30vw;
+  margin-right: 20vw;
+}
+.slider-btn:hover {
+  background-color: #ff3440;
+}
+#audio-player {
+  display: none;
+}
+.like-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  color: #fff;
+  right: -105px;
+  position: relative;
+}
+.like-button i.bx-heart {
+  font-size: 25px;
+  position: absolute;
+  transform: translate(650%, 15%);
+}
+
+.liked {
+  color: #ff6b6b;
+}
+.bigger-icon {
+  font-size: 30px;
+  position: absolute;
+  transform: translate(742%, 92%);
+}
+.played h3 {
+  color: white;
+  position: relative;
+  right: -325px;
+  top: 45px;
+  font-family: "Inter", sans-serif;
+}
+.recent-song {
+  color: white;
+  position: relative;
+  right: -290px;
+  top: 65px;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+}
+.trending {
+  color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.trending-song {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 10px;
+  position: relative;
+  right: -310px;
+  top: 62px;
+}
+.list-song {
+  color: white;
+  position: relative;
+  list-style: none;
+  right: -270px;
+  top: 62px;
+}
+
+.album-1 {
+  margin: 30px;
+  position: relative;
+  left: -25px;
+}
+.album-2 {
+  margin: 30px;
+  position: relative;
+  left: -25px;
+}
+.album-3 {
+  margin: 30px;
+  position: relative;
+  left: -25px;
+}
+.album-4 {
+  margin: 30px;
+  position: relative;
+  left: -25px;
+}
+.doja-title {
+  position: relative;
+  left: 75px;
+  margin-top: -45px;
+}
+
+.trending-artist {
+  position: relative;
+  left: 75px;
+  margin-top: -10px;
+}
+.duration {
+  position: relative;
+  left: 274px;
+  margin-top: -62px;
+}
+.play-btn {
+  position: relative;
+  left: 330px;
+  margin-top: -79px;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  transform: translate(50%, -100%);
+}
+.pause-btn {
+  position: relative;
+  left: 330px;
+  margin-top: -79px;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+  transform: translate(50%, -100%);
+}
+.btn2 {
+  background: none;
+  border: none;
+}
+.play-btn:focus {
+  outline: none;
+}
+.btn2:focus {
+  outline: none;
+}
+.btn:focus {
+  outline: none;
+}
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0px -1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.music-player-inner {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.player-thumbnail {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.player-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-details {
+  flex-grow: 1;
+}
+
+.player-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.player-artist {
+  margin: 0;
+  font-size: 14px;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.player-controls button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #fff;
+}
+
+#progress-bar {
+  flex-grow: 1;
+  height: 4px;
+  background-color: #fff;
+  margin: 0 10px;
+  position: relative;
+  top: -50px;
+  left: -62%;
+}
+#progress {
+  height: 100%;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.3s;
+}
+.more-playlist {
+  color: white;
+  position: relative;
+  right: -70%;
+  bottom: 400px;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+}
+
+/* new css */
+/* Add this CSS to your existing CSS file or in a <style> tag in your HTML */
+.scrollable-row {
+  display: flex;
+  overflow-x: hidden;
+  width: 1128px;
+  align-items: flex-start;
+  gap: 24px;
+  white-space: nowrap;
+  margin-left: 22vw;
+  padding: 10px; /* Add some padding for spacing */
+  scrollbar-width: none; /* Hide the scrollbar for Firefox */
+  -ms-overflow-style: none; /* Add some padding for spacing */
+}
+
+.scrollable-row .album-1 {
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+.recommend {
+  color: white;
+  margin-left: 22vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.scrollable-item-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.album-image {
+  display: flex;
+  width: 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-title {
+  overflow: hidden;
+  color: var(--light-100, #fff);
+  text-overflow: ellipsis;
+  font-family: Circular Std;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.album-artist {
+  overflow: hidden;
+  color: var(--uncategorized-tertiary, rgba(229, 238, 255, 0.6));
+  text-overflow: ellipsis;
+  font-family: Circular Std;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.album-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.album-play-btn {
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.album-pause-btn {
+  outline: none;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: none;
+}
+
+#prevButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Make it a perfect circle */
+  background-color: #222226;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  color: #222226;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+
+#nextButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Make it a perfect circle */
+  background-color: #222226;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  color: #222226;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+
+#prevButton2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Make it a perfect circle */
+  background-color: #222226;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  color: #222226;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+
+#nextButton2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Make it a perfect circle */
+  background-color: #222226;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  color: #222226;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+#prevButton3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Make it a perfect circle */
+  background-color: #222226;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  color: #222226;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+
+#nextButton3 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Make it a perfect circle */
+  background-color: #222226;
+  border: none;
+  border-radius: 50%; /* Make it round */
+  color: #222226;
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+}
+.playlisthere {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50vw;
+}
+
+.playlist-img {
+  height: 164px;
+  width: 164px;
+}

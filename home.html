@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aurtunez</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+New+Tai+Lue:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <div class="sidenav">
+        <!-- Search input within the side navigation -->
+        <input type="text" placeholder="Search Artist and Music" class="search">
+        <ul>
+            <!-- Add the image next to the "Home" text with spacing -->
+            <li class="home">
+                <img src="home.png" alt="Home Icon" class="icon">
+                Home
+            </li>
+            <!-- Add spacing to the right of the icon for other items -->
+            <li class="discover">
+                <img src="discover.png" alt="Discover Icon" class="icon">
+                Discover
+            </li>
+            <li class="radio">
+                <img src="radio.png" alt="Radio Icon" class="icon">
+                Radio
+            </li>
+            <li class="albums">
+                <img src="playlist.png" alt="Albums Icon" class="icon">
+                Albums
+            </li>
+
+            <li>
+                <div class="playlist-title">
+                    <h3>Playlist</h3>
+                </div>
+                <ul>
+                    <li class="playlist">Playlist 1</li>
+                    <li class="playlist">Playlist 2</li>
+                    <li class="playlist">Playlist 3</li>
+                    <li class="playlist">Discover Weekly</li>
+                    <li class="playlist">Release Radar</li>
+                    <li class="playlist">New Music Friday</li>
+                    <li class="playlist">Recommended for You</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+<!-- 
+    <div id="image-slider" class="carousel slide" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators justify-content-center">
+            <li data-target="#image-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#image-slider" data-slide-to="1"></li>
+            <li data-target="#image-slider" data-slide-to="2"></li><!-- Add an indicator for the third slide -->
+        </ol>
+         -->
+        <!-- Slides -->
+        
+        <div class="carousel-inner">
+             <div class="slides">
+        <h3 class="trending-song"></h3>
+        <ul id="slides" class="list-song">
+        </ul>
+      </div>
+</div>
+
+            <!-- <div class="carousel-item active">
+                <img src="Banner-image.png" alt="Image 1" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h3 class="featured">FEATURED SONG</h3>
+                    <p class="artist-name">Post Malone</p>
+                    <p class="song-name">Overdrive</p>
+                    <i class='bx bx-dots-horizontal-rounded bigger-icon'></i>
+                    <button class="like-button" id="likeButton">
+                        <i class='bx bx-heart'></i>
+                    </button>
+                    <audio id="audio-player" src="your-audio-file.mp3" controls></audio>
+                    <button class="slider-btn">Play</button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="banner2.webp" alt="Image 2" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h3 class="featured">FEATURED SONG</h3>
+                    <p class="artist-name">Olivia Rodrigo</p>
+                    <p class="song-name">Get Him Back!</p>
+                    <i class='bx bx-dots-horizontal-rounded bigger-icon'></i>
+                    <button class="like-button" id="likeButton">
+                        <i class='bx bx-heart'></i>
+                        <button class="slider-btn">Play</button>
+                    </button>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="maxresdefault.png" alt="Image 3" class="d-block w-100">
+                <div class="carousel-caption">
+                    <h3 class="featured">FEATURED SONG</h3>
+                    <p class="artist-name">Another Artist</p>
+                    <p class="song-name">Another Song</p>
+                    <i class='bx bx-dots-horizontal-rounded bigger-icon'></i>
+                    <button class="like-button" id="likeButton3">
+                        <i class='bx bx-heart'></i>
+                        <button class="slider-btn">Play</button>
+                    </button>
+                </div> -->
+            </div>
+            <!-- Add more slides as needed -->
+        </div>
+    </div>
+
+
+    <!-- <div class="played">
+        <h3>New Songs</h3>
+        <ul class="recent-song" id="recentSongList">
+        </ul>
+      </div> -->
+
+
+
+<div class="newsong">
+  <h3 class="recommend">New Songs 
+    <div> <button id="prevButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <g opacity="0.5">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84891 4.14645C10.0503 4.34171 10.0503 4.65829 9.84891 4.85355L6.75821 7.84977L9.86585 11.1637C10.0575 11.368 10.0419 11.6842 9.83115 11.87C9.62038 12.0557 9.29418 12.0407 9.10257 11.8363L5.33331 7.8169L9.11951 4.14645C9.32093 3.95118 9.64749 3.95118 9.84891 4.14645Z" fill="white"/>
+        </g>
+      </svg></button>
+    <button id="nextButton"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.15109 11.8536C5.94967 11.6583 5.94967 11.3417 6.15109 11.1464L9.24179 8.15023L6.13415 4.83634C5.94254 4.63201 5.95808 4.31579 6.16885 4.13003C6.37962 3.94428 6.70582 3.95934 6.89743 4.16367L10.6667 8.1831L6.88049 11.8536C6.67907 12.0488 6.35251 12.0488 6.15109 11.8536Z" fill="white"/>
+      </svg></button> </div></h3>
+ 
+  <div class="scrollable-row" id="playlist1Songs">
+    <!-- Playlist 1 Songs will be added here dynamically -->
+  </div>
+</div>
+
+      <div class="trending">
+        <h3 class="trending-song">Trending</h3>
+        <ul id="trending" class="list-song">
+          <!-- <li class="song-list">
+          </li>
+          <li class="album-1">
+            <img src="doja.png" alt="Doja Cat Album Cover">
+            <h5 class="doja-title">Paint The Town Red</h5>
+            <p class="trending-artist">Doja Cat</p>
+            <p class="duration">3:51</p>
+            <button id="playButton1" onclick="togglePlayPause('audio1')" class="btn">
+                <i class='bx bx-play-circle play-btn' style="font-size: 2em;"></i> 
+            </button>
+            <audio id="audio1" src="paint-the-town-red.mp3"></audio>             
+          </li>
+          </li>
+          <li class="album-1">
+            <img src="travis.png" alt="Doja Cat Album Cover">
+            <h5 class="doja-title">Telekinesis</h5>
+            <p class="trending-artist">Travis Scott ft SZA, Future</p>
+            <p class="duration">5:54</p>
+            <button id="playButton2" onclick="togglePlayPause('audio2')" class="btn2">
+                <i class='bx bx-play-circle play-btn' style="font-size: 2em;"></i> 
+            </button>
+            <audio id="audio2" src="Travis Scott - TELEKINESIS (Official Audio) ft. SZA, Future.mp3"></audio>
+        </li>
+
+        <li class="album" data-audio-id="audio2" data-song-title="Another Song" data-artist-name="Another Artist">
+            <img src="Luke.png" alt="Another Album Cover">
+            <h5 class="doja-title">Another Song</h5>
+            <p class="trending-artist">Another Artist</p>
+            <p class="duration">4:12</p>
+            <button id="playButton3" onclick="togglePlayPause('audio3', 'Another Song', 'Another Artist')" class="btn">
+                <i class='bx bx-play-circle play-btn' style="font-size: 2em;"></i> 
+            </button>
+            <audio id="audio3" src="Luke Combs - Fast Car (Audio).mp3"></audio>             
+        </li>
+
+        <li class="album" data-audio-id="audio2" data-song-title="Another Song" data-artist-name="Another Artist">
+            <img src="SZA.png" alt="Another Album Cover">
+            <h5 class="doja-title">Another Song</h5>
+            <p class="trending-artist">Another Artist</p>
+            <p class="duration">4:12</p>
+            <button id="playButton4" onclick="togglePlayPause('audio4', 'Another Song', 'Another Artist')" class="btn">
+                <i class='bx bx-play-circle play-btn' style="font-size: 2em;"></i> 
+            </button>
+            <audio id="audio4" src="SZA - Snooze (Audio).mp3"></audio>             
+        </li> -->
+        </ul>
+      </div>
+</div>
+
+
+<!-- <div class="trend-playlist">
+    <h5 class="more-playlist">Top Playlist for You</h5>
+    <ul id="playlisthere">
+        <img class="playlist-img" src="image.png" alt="playllist">
+
+    </ul>
+</div> -->
+</div>
+
+
+
+<div class="newsong">
+  <h3 class="recommend">Recommended Songs
+    <div> <button id="prevButton2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <g opacity="0.5">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84891 4.14645C10.0503 4.34171 10.0503 4.65829 9.84891 4.85355L6.75821 7.84977L9.86585 11.1637C10.0575 11.368 10.0419 11.6842 9.83115 11.87C9.62038 12.0557 9.29418 12.0407 9.10257 11.8363L5.33331 7.8169L9.11951 4.14645C9.32093 3.95118 9.64749 3.95118 9.84891 4.14645Z" fill="white"/>
+        </g>
+      </svg></button>
+        <button id="nextButton2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.15109 11.8536C5.94967 11.6583 5.94967 11.3417 6.15109 11.1464L9.24179 8.15023L6.13415 4.83634C5.94254 4.63201 5.95808 4.31579 6.16885 4.13003C6.37962 3.94428 6.70582 3.95934 6.89743 4.16367L10.6667 8.1831L6.88049 11.8536C6.67907 12.0488 6.35251 12.0488 6.15109 11.8536Z" fill="white"/>
+          </svg></button> </div>
+  </h3>
+  <div class="scrollable-row" id="playlist2Songs">
+    <!-- Playlist 2 Songs will be added here dynamically -->
+  </div>
+</div>
+
+<div class="newsong">
+  <h3 class="recommend">What's Hot
+    <div> <button id="prevButton3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <g opacity="0.5">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.84891 4.14645C10.0503 4.34171 10.0503 4.65829 9.84891 4.85355L6.75821 7.84977L9.86585 11.1637C10.0575 11.368 10.0419 11.6842 9.83115 11.87C9.62038 12.0557 9.29418 12.0407 9.10257 11.8363L5.33331 7.8169L9.11951 4.14645C9.32093 3.95118 9.64749 3.95118 9.84891 4.14645Z" fill="white"/>
+        </g>
+      </svg></button>
+    <button id="nextButton3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.15109 11.8536C5.94967 11.6583 5.94967 11.3417 6.15109 11.1464L9.24179 8.15023L6.13415 4.83634C5.94254 4.63201 5.95808 4.31579 6.16885 4.13003C6.37962 3.94428 6.70582 3.95934 6.89743 4.16367L10.6667 8.1831L6.88049 11.8536C6.67907 12.0488 6.35251 12.0488 6.15109 11.8536Z" fill="white"/>
+      </svg></button> </div></h3>
+ 
+  <div class="scrollable-row" id="playlist4Songs">
+    <!-- Playlist 1 Songs will be added here dynamically -->
+  </div>
+</div>
+
+
+
+  
+    <script src="index.js"></script>
+</html>
